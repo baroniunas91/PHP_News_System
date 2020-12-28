@@ -93,16 +93,12 @@ require __DIR__ . '/header.php';
         </form>
     </div>
     <script src="./assets//ckeditor/ckeditor.js"></script>
+    <script src="./assets//ckfinder/ckfinder.js"></script>
     <script src="./assets/scripts/jquery.js"></script>
     <script src="./assets/scripts/jquery.datetimepicker.full.js"></script>
     <script>
-        CKEDITOR.replace( 'editor1', {
-            extraPlugins: 'filebrowser',
-            filebrowserBrowseUrl: 'browse.php',
-            filebrowserUploadMethod: 'form',
-            filebrowserUploadUrl: 'upload.php',
-            
-        } );
+        var editor = CKEDITOR.replace( 'editor1');
+        CKFinder.setupCKEditor( editor );
         $("#datetime").datetimepicker({ step: 5 });
     </script>
 </body>
